@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Головешкин Константин - Главная</title>
+
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/adaptive.css" />
+  <style>
+
+    /*  Базовые стили */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+      padding-top: 80px;     /* высота header */
+      padding-bottom: 60px;  /* высота footer */
+      min-height: 100vh;
+    }
+
+    /* Анимации  */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    .fade-in:nth-child(1) { animation-delay: 0.1s; }
+    .fade-in:nth-child(2) { animation-delay: 0.2s; }
+    .fade-in:nth-child(3) { animation-delay: 0.3s; }
+    .fade-in:nth-child(4) { animation-delay: 0.4s; }
+    .fade-in:nth-child(5) { animation-delay: 0.5s; }
+
+    /* ========== Шапка ========== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    nav h2 {
+      text-align: center;
+      margin-bottom: 0.8rem;
+      color: #007bff;
+      font-size: 1.3rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center; 
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: #495057;
+      font-weight: 600;
+      text-decoration: none;
+      position: relative;
+      padding: 0.3rem 0;
+    }
+
+    nav a:hover {
+      color: #0056b3;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #007bff;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    nav a.active {
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    /*  Подвал  */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #343a40;
+      color: white;
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 0.5rem 0;
+      z-index: 999;
+    }
+
+    /* Основной контент  */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 1.5rem 0 1rem;
+      color: #222;
+    }
+
+    img {
+      display: block;
+      margin: 1rem auto;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    p {
+      margin-bottom: 1rem;
+      text-align: center;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <nav>
+      <h2>Меню</h2>
+      <ul>
+        <li><a href="about.html">О себе</a></li>
+        <li><a href="hobbies.html">Увлечения</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <h1 class="fade-in">Константин</h1>
+    <img
+      src="https://sun9-87.userapi.com/s/v1/ig2/VO6cf2pGGGhjcvou8enX-cPkFRR28WEW53zl3wsMcR_a2hTHXc65wiOXopuTdYeqfjkqXtBmW4p8Tr-GvllYDUo_.jpg?quality=96&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,810x1080&from=bu&cs=810x0"
+      width="300"
+      class="fade-in"
+    />
+    <p class="fade-in">Студент 3-го курса очной формы обучения Ярославского государственного университета.</p>
+    <p class="fade-in">Являюсь спорторгом физико-технического факультета.</p>
+    <p class="fade-in">Это типо главная страница</p>
+  </main>
+
+  <!-- Подвал -->
+  <footer>
+    <p>&copy; 2025 Головешкин Константин. Все права защищены.</p>
+  </footer>
+</body>
+</html>
