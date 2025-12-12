@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/adaptive.css" />
+</head>
+<body>
+    <form>
+  <div>
+    <label for="name">Ваше имя:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div>
+    <label for="subject">Тема:</label>
+    <select id="subject" name="subject">
+      <option>Общий вопрос</option>
+      <option>Предложение о работе</option>
+      <option>Сотрудничество</option>
+    </select>
+  </div>
+  <div>
+    <label for="message">Сообщение:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit">Отправить</button>
+</form>
+<h1>Мои соц.сети:</h1>
+            <ul><li>Телеграмм @Kostya7600</li>
+                <li><a href="https://vk.com/id548708290">Вконтакте</a></li>
+                <li><a href="https://i.ytimg.com/vi/w8zrZj9YWL0/maxresdefault.jpg">MAX</a></li>
+            </ul>
+</body>
+</html>
+<style>/* Базовые стили */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+/* Шапка */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+header::before {
+  content: "Контакты";
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #007bff;
+}
+
+/* Подвал */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #343a40;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Форма и соцсети */
+body > form,
+body > h1,
+body > ul {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+form div {
+  margin-bottom: 1.2rem;
+}
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.25);
+}
+button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover {
+  background: #218838;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  margin: 0.6rem 0;
+  text-align: center;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+</style>
